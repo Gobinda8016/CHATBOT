@@ -1,0 +1,29 @@
+{% extends "layout.html" %} {% block content %}
+<div class="name">
+    <span class="chat">
+                <h1>EDOC <i class="fas fa-stethoscope"></i> </h1>
+            </span>
+    <span class="para">
+                A convinient Medical Helpbot for You
+            </span>
+</div>
+
+<div class="meeting">
+    <span class="room">
+
+                <a href="#" class="new-room"><i class="far fa-comment-dots"></i> Create room</a>
+            </span>
+    <form class="form" action="">
+        <div class="form-input">
+            <span class="icon"><i class="far fa-keyboard"></i></span>
+            <input type="text" name="text" id="form" class="form" placeholder="Enter a link or code">
+            <label class="form-text" for="form">Join</label>
+        </div>
+    </form>
+</div>
+<div class="slideshow">
+
+</div>
+<hr>
+<div class="footer"> <a href="">Learn more</a> about EDOC</div>
+{% endblock %}

@@ -1,0 +1,153 @@
+.container{
+    margin-top: 18px;
+    margin-left: 50px;
+    margin-right: 80px;
+}
+span.account{
+    display: inline-block;
+    cursor: pointer;
+    margin-left: 5px;
+    color: #FF0F80;
+}
+
+span.header-icon .fas{
+    color: white;
+    cursor: pointer;
+    margin-left: 20px;
+    margin-right: 5px;
+    font-size: 12px;
+    margin-top: 60px;
+
+}
+
+span.header-icon{
+    background-color: #FF0F80;
+    border-top-right-radius: 45%;
+    border-bottom-right-radius: 45%;
+    padding: 3PX;
+    
+}
+
+span.content{
+   float: right;
+   margin-top: 60px;
+    
+}
+
+.content-txt{
+    margin: 10px;
+    padding: 20px;
+    color: #000000;
+}
+
+a {
+    text-decoration: none !important;
+    color: #000000;
+}
+
+span.content :hover{
+    background-color: #D9D4F0;
+    border-radius: 10px;
+    padding: 8px;
+}
+.name{
+    margin-top: 150px;
+}
+span.chat{
+    margin-top: 100px;
+    font-family: Roboto,Arial,sans-serif;
+    font-size: 32px;
+    font-weight: 3200px;
+    letter-spacing: 0;
+    line-height: 10px;
+    padding-bottom: 8px;
+    
+    
+}
+span.para{
+    font-family: 'Google Sans Display',Roboto,Arial,sans-serif;
+    font-size: 1.125rem;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: 1.5rem;
+    color: #5f6368;
+    max-width: 30rem;
+    padding-bottom: 3em;
+}
+.meeting{
+    margin-top: 80px;
+}
+
+form{
+    display: inline-block;
+    margin-left: 15px;
+    padding: 15px;
+    background-color: transparent;
+}
+
+.new-room{
+    font-family: Roboto,Arial,sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    background: #1a73e8;;
+    width: 16px;
+    padding: 16px;
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-property: box-shadow, transform;
+    transition-property: box-shadow, transform;
+}
+
+.new-room:hover, .new-room:focus, .new-room:active{
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+}
+
+.new-room .far{
+    margin-right: 5px;
+}
+
+.form{
+    font-family: Roboto,Arial,sans-serif;
+    font-size: 18px;
+    text-align: center;
+    text-justify: centre;
+    padding: 12px;
+    border-radius: 5px;
+    cursor: pointer
+     
+}
+
+.form-input{
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+.icon{
+    position: absolute;
+    left: 12px;
+    top: 0;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.form-text{
+    margin-left: 12px;
+    cursor: pointer;
+}
+
+hr{
+
+    margin-top: 30px;
+    
+    
+}

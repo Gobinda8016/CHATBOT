@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EDOC</title>
+    <link rel="stylesheet" href="static/css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css">
+    <script src="https://kit.fontawesome.com/c6a19a1ece.js" crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="static/css/style2.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <span class="header-icon">
+            <i class="fas fa-key"></i>
+        </span>
+        <span class="account">
+           <a  href="#"> <h4>Account</h4></a>
+        </span> <span class="content">
+            <a href="{{ url_for('home') }}" id="chat" class="content-txt">Home</a>
+            <a href="{{ url_for('chat') }}" id="chat" class="content-txt">Chat</a>
+        
+            <a href="#" id="chat" class="content-txt">Hospital</a>
+        
+            <a href="#" id="blog" class="content-txt">Blog</a>
+        
+            <a href="" id="info" class="content-txt">Info</a>
+        </span> {% block content %} {% endblock %}
+</body>
+
+</html>

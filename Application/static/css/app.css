@@ -265,29 +265,16 @@ body {
     justify-content: center;
 }
 
-input[type="text"] {
-    width: 100%;
+.chat-input {
+    width: 260px;
     border: 1px solid #ccc;
     font-size: 1rem;
     border-radius: 5px;
     height: 2.2rem;
 }
 
-.chat-input {
-    width: 300px;
-    font-size: 1rem;
-    border-radius: 5px;
-    height: 2.2rem;
-    outline: none;
-    resize: none;
-    max-height: 3rem;
-    box-sizing: border-box;
-    padding-right: 30px;
-}
-
 .chat-input:is(:focus, :valid) {
     border: 2px solid #000000;
-    height: 3rem;
 }
 
 .chat-input::-webkit-scrollbar {
@@ -319,4 +306,29 @@ input[type="text"] {
 .submit-btn:hover,
 .pin-btn:hover {
     opacity: 1;
+}
+
+.out-msg{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.my-msg{
+    display: flex;
+    justify-content: flex-end;
+    margin: 0.75rem;
+    padding: 0.5rem;
+    background-color: #ddd;
+    border-radius: 25px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.4);
+    word-break: break-all;
+}
+
+@media (max-width:500px){
+
+    .popup{
+        bottom: 120px;
+        right: 10%;
+        width: 80vw;
+    }
 }

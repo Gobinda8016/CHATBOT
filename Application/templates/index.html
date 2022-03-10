@@ -1,29 +1,194 @@
-{% extends "layout.html" %} {% block content %}
-<div class="name">
-    <span class="chat">
-                <h1>EDOC <i class="fas fa-stethoscope"></i> </h1>
-            </span>
-    <span class="para">
-                A convinient Medical Helpbot for You
-            </span>
-</div>
+<!DOCTYPE html>
+<html lang="en">
 
-<div class="meeting">
-    <span class="room">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EDOC</title>
+    <link rel="stylesheet" href="static/css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css">
+    <script src="https://kit.fontawesome.com/c6a19a1ece.js" crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
 
-                <a href="#" class="new-room"><i class="far fa-comment-dots"></i> Create room</a>
-            </span>
-    <form class="form" action="">
-        <div class="form-input">
-            <span class="icon"><i class="far fa-keyboard"></i></span>
-            <input type="text" name="text" id="form" class="form" placeholder="Enter a link or code">
-            <label class="form-text" for="form">Join</label>
-        </div>
-    </form>
-</div>
-<div class="slideshow">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../static/css/app.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
 
-</div>
-<hr>
-<div class="footer"> <a href="">Learn more</a> about EDOC</div>
-{% endblock %}
+<body>
+
+    <body>
+        <!---Main Navigation-->
+        <nav id="MainNavBar" class="navbar navbar-dark navbar-expand-md fixed-top">
+
+            <a href="#" class="navbar-brand">EDOC
+                <i class="fas fa-stethoscope"></i>
+            </a>
+
+            <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navLinks">
+                <!--Navigation Button after Collapse-->
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navLinks" aria-label="Toggle navigation">
+                <!--Navigation Items-->
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a href="" class="nav-link">HOME</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">ACCOUNT</a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#">SignIn</a></li>
+                            <li><a class="dropdown-item" href="#">SignUp</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">BLOG</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">ABOUT</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">TICKET</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <!--Chat Bot button-->
+        <section id="chat-popup">
+            <div id="chat">
+                <input type="image" class="chat-btn" src="../static/images/chatbot-4736275.svg">
+            </div>
+            <!--Chat Bot Box-->
+            <section class="msger">
+                <header class="msger-header">
+                    <div class="msger-header-title">
+                        <i></i>E-Doc Medical Chatbot <i></i>
+                    </div>
+                </header>
+                <!--Chat Bot Text Area-->
+                <main class="msger-chat">
+                    <div class="msg left-msg">
+                        <div class="msg-img">
+                            <img src="../static/images/chatbot-4736275.svg" class="profile" alt="bot-img">
+                        </div>
+
+                        <div class="msg-bubble">
+                            <div class="msg-info">
+                                <div class="msg-info-name">EDOC</div>
+                                <div class="msg-info-time">12:45</div>
+                            </div>
+
+                            <div class="msg-text">
+                                Hello! I'm EDOC, your personal health insurance assistant.Please type your query. 😄
+                            </div>
+                        </div>
+                    </div>
+
+                </main>
+
+                <!--Input and send-->
+                <form class="msger-inputarea">
+                    <input type="text" class="msger-input" id="textInput" placeholder="Enter your message...">
+                    <button type="submit" class="msger-send-btn">Send</button>
+                </form>
+            </section>
+
+            <!--JavaScript Funtionality-->
+            <!-- partial -->
+            <script>
+                const popup = document.querySelector('.msger');
+                const chatBtn = document.querySelector('.chat-btn');
+
+                //chat button toggeler
+
+                chatBtn.addEventListener('click', () => {
+                    popup.classList.toggle('show');
+                })
+            </script>
+            <script src='https://use.fontawesome.com/releases/v5.0.13/js/all.js'></script>
+            <script>
+                const msgerForm = get(".msger-inputarea");
+                const msgerInput = get(".msger-input");
+                const msgerChat = get(".msger-chat");
+
+
+                // Icons of Bot and
+                const BOT_IMG = (src = "../static/images/chatbot-4736275.svg");
+                const PERSON_IMG = (src = "../static/images/743424.png");
+                const BOT_NAME = "EDOC";
+                const PERSON_NAME = "You";
+
+                msgerForm.addEventListener("submit", event => {
+                    event.preventDefault();
+
+                    const msgText = msgerInput.value;
+                    if (!msgText) return;
+
+                    appendMessage(PERSON_NAME, PERSON_IMG, "right", msgText);
+                    msgerInput.value = "";
+                    botResponse(msgText);
+                });
+
+                function appendMessage(name, img, side, text) {
+                    //   Simple solution for small apps
+                    const msgHTML = `
+    <div class="msg ${side}-msg">
+    <div class="msg-img" style="background-image: url(${img})"></div>
+    <div class="msg-bubble">
+    <div class="msg-info">
+      <div class="msg-info-name">${name}</div>
+      <div class="msg-info-time">${formatDate(new Date())}</div>
+    </div>
+    <div class="msg-text">${text}</div>
+    </div>
+    </div>
+    `;
+
+                    msgerChat.insertAdjacentHTML("beforeend", msgHTML);
+                    msgerChat.scrollTop += 500;
+                }
+
+                function botResponse(rawText) {
+
+                    // Bot Response
+                    $.get("/get", {
+                        msg: rawText
+                    }).done(function (data) {
+                        console.log(rawText);
+                        console.log(data);
+                        const msgText = data;
+                        appendMessage(BOT_NAME, BOT_IMG, "left", msgText);
+
+                    });
+
+                }
+
+
+                // Utils
+                function get(selector, root = document) {
+                    return root.querySelector(selector);
+                }
+
+                function formatDate(date) {
+                    const h = "0" + date.getHours();
+                    const m = "0" + date.getMinutes();
+
+                    return `${h.slice(-2)}:${m.slice(-2)}`;
+                }
+            </script>
+
+            <!----Boot Strap JavaScript--->
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+                integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+                crossorigin="anonymous">
+                </script>
+    </body>
+
+</html>

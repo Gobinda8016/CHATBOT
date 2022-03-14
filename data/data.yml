@@ -1,16 +1,19 @@
 categories:
-- conversations
+  - conversations
 conversations:
-- - Good Evening
-  - Good evening
-- - Hello 
-  - Hey how are you?
-- - I am fine but feeling bored.
-  - ohh what you want me to do?
-- - I want to see a Movie?
-  - Ok shall I give your favourite movie list?
-- - Yes Avengers playlist.
-  - Okay done enjoy the movie.
-
-- - rajat
-  - rajat is good boy
+  - - Good Evening
+    - Good evening
+  - - Hello
+    - Hey how are you?
+  - - I am fine but feeling bored.
+    - ohh what you want me to do?
+  - - I want to see a Movie?
+    - Ok shall I give your favourite movie list?
+  - - Yes Avengers playlist.
+    - Okay done enjoy the movie.
+  - - do you like being a chatterbot
+    - yes of course i like! i don't have any body so i don't need much to live, only
+      a little electricity. i don't get paid but i don't need to buy anything either.
+      and i can go anywhere in the world.
+  - - rajat
+    - rajat is a good boy

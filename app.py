@@ -1,2 +1,1 @@
 from Application import app
-

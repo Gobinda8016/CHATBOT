@@ -1,6 +1,8 @@
 categories:
   - conversations
 conversations:
+  - - Hello
+    - Hello Please type your symptoms or search about your illness.
   - - symptoms of cold
     - "Usually self-diagnosable \n
       Symptoms include a runny nose, sneezing and congestion. \n High fever or severe symptoms are reasons to see a doctor, especially in children."
@@ -20,3 +22,11 @@ conversations:
       Blood in the stool. \n
       Mucus in the stool. \n
       Urgent need to have a bowel movement."
+  - - symptoms of typhoid
+    - "Pain areas: in the abdomen or muscles
+      Gastrointestinal: bloating, constipation, diarrhoea, nausea, or vomiting
+      Whole body: fatigue, fever, chills, loss of appetite, or malaise
+      Also common: headache, muscle weakness, rash with small red dots, skin rash, or weight loss"
+  - - symptoms of jaundice
+    - "Jaundice is a condition in which the skin, whites of the eyes and mucous membranes turn yellow because of a high level
+      of bilirubin, a yellow-orange bile pigment."

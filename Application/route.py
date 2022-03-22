@@ -10,6 +10,11 @@ def home():
     return render_template("index.html")
 
 
+@app.route("/Login")
+def Login():
+    return render_template("Login.html")
+
+
 @app.route("/get")
 def get_bot_response():
     userText = request.args.get('msg')

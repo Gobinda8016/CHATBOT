@@ -129,6 +129,6 @@ dmypy.json
 .pyre/
 
 #files ignore
-.chatbotmodel.h5
-.classes.pkl
-.words.pkl
+.h5
+.pkl
+.pkl

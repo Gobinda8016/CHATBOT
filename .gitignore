@@ -127,3 +127,8 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+#files ignore
+.chatbotmodel.h5
+.classes.pkl
+.words.pkl

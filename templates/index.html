@@ -44,7 +44,7 @@
                             data-bs-toggle="dropdown" aria-expanded="false">ACCOUNT</a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <li><a class="dropdown-item" href="{{ url_for('Login')}}">SignIn</a></li>
-                            <li><a class="dropdown-item" href="#">SignUp</a></li>
+                            <li><a class="dropdown-item" href="{{ url_for('registration')}}">SignUp</a></li>
                         </ul>
                     </li>
                     <li class="nav-item">
@@ -73,7 +73,7 @@
                     </div>
                 </header>
                 <!--Chat Bot Text Area-->
-                <main class="msger-chat">
+                <main class="msger-chat" id="response">
                     <div class="msg left-msg">
                         <div class="msg-img">
                             <img src="../static/images/chatbot-4736275.svg" class="profile" alt="bot-img">
@@ -96,7 +96,7 @@
                 <!--Input and send-->
                 <form class="msger-inputarea">
                     <input type="text" class="msger-input" id="textInput" placeholder="Enter your message...">
-                    <button type="submit" class="msger-send-btn">Send</button>
+                    <button type="submit" class="msger-send-btn" id="submit-button">Send</button>
                 </form>
             </section>
 
@@ -155,17 +155,30 @@
                     msgerChat.scrollTop += 500;
                 }
 
+                //bot response
                 function botResponse(rawText) {
+                    jQuery(document).ready(function () {
 
-                    // Bot Response
-                    $.get("/get", {
-                        msg: rawText
-                    }).done(function (data) {
-                        console.log(rawText);
-                        console.log(data);
-                        appendMessage(BOT_NAME, BOT_IMG, "left", data);
+                        $.ajax({
+                            type: "POST",
+                            url: "/chatbot",
+                            data: {
+                                msg: rawText
+                            },
+                            success: function (result) {
+                                console.log(rawText);
+                                console.log(result);
+                                appendMessage(BOT_NAME, BOT_IMG, "left", result.response);
+                            },
+                            error: function (result) {
+                                alert('error');
+                            }
+                        });
+
+
 
                     });
+
 
                 }
 

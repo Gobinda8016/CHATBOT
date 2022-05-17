@@ -132,3 +132,6 @@ dmypy.json
 .h5
 .pkl
 .pkl
+chatbotmodel.h5
+classes.pkl
+words.pkl

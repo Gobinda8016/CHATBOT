@@ -24,7 +24,7 @@ body {
     align-items: center;
     height: 100vh;
     background-image: var(--body-bg);
-    background: #03045e;
+    background: #e293b0;
     font-family: 'Open Sans', sans-serif;
 }
 
@@ -42,7 +42,7 @@ body {
     border: var(--border);
     padding: 0.15rem;
     border-radius: 15px;
-    box-shadow: 5px 5px 5px rgb(248, 156, 128);
+    box-shadow: 5px 5px 5px rgb(252, 164, 97);
 }
 
 .show {
@@ -178,7 +178,7 @@ body {
 }
 
 #MainNavBar .navbar-brand {
-    color: #f94144;
+    color: #e71114;
     font-size: 1.5rem;
     font-weight: 100;
 }

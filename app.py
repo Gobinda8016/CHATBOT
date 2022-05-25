@@ -1,8 +1,13 @@
+import email
 from flask import Flask, render_template, jsonify, request
 import processor
-
+import mysql.connector
 
 app = Flask(__name__)
+
+conn=mysql.connector.connect(host="remotemysql.com",user="eYvIUyXdHW",password="n0m4CLl2X5",database="eYvIUyXdHW")
+
+cursor=conn.cursor()
 
 app.config['SECRET_KEY'] = 'enter-a-very-secretive-key-3479373'
 
@@ -41,7 +46,25 @@ def chatbotResponse():
         response = processor.chatbot_response(the_question)
 
     return jsonify({"response": response})
-
+##For_Login 
+@app.route('/login_validation',methods=['POST'])
+def login_validation():
+    username=request.form.get('username')
+    password=request.form.get('password')
+    cursor.execute("""SELECT * FROM `Registration` WHERE `username` LIKE '{}' AND `password` LIKE '{}'""".format(username,password))
+    users=cursor.fetchall()
+    print(users)
+    return "HELLO"
+##Adding User Information into Database
+@app.route('/add_user',methods=['POST'])
+def add_user():
+    username=request.form.get('usernamea')
+    email=request.form.get('emaila')
+    password=request.form.get('passworda')
+    cursor.execute("""INSERT INTO `Registration` (`username`,`email`,`password`) VALUES ('{}','{}','{}')""".format(username,email,password))
+    conn.commit()
+    return  render_template('index.html')
+    
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port='8888', debug=True)

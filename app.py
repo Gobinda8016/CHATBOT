@@ -54,7 +54,8 @@ def login_validation():
     cursor.execute("""SELECT * FROM `Registration` WHERE `username` LIKE '{}' AND `password` LIKE '{}'""".format(username,password))
     users=cursor.fetchall()
     print(users)
-    return "HELLO"
+    return  render_template('index.html')
+    
 ##Adding User Information into Database
 @app.route('/add_user',methods=['POST'])
 def add_user():
@@ -67,4 +68,4 @@ def add_user():
     
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port='8888', debug=True)
+    app.run(host='0.0.0.0', port='5000', debug=True)

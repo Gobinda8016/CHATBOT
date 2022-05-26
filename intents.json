@@ -78,7 +78,62 @@
                 "Generally feeling unwell (malaise)"
             ],
             "responses": [
-                "It seems that you are suffering from common cold, type: (CMED) for medicine"
+                "It seems that you are suffering from common cold, type: (common cold medicines) for medicine, (common cold prevention) for prevention, (common cold diet) for diet."
+            ]
+        },
+        {
+            "tag": "malaria",
+            "patterns":[
+                "Shaking chills",
+                "Profuse sweating",
+                "Abdominal pain",
+                "Muscle pain",
+                "Nausea",
+                "Vomiting",
+                "Diarrhoea",
+                "Anaemia",
+                "Deep breathing and respiratory distress",
+                "Clinical jaundice and evidence of vital organ dysfunction",
+                "Impaired consciousness",
+                "Bloody stools",
+                "Convulsions",
+                "Coma"
+            ],
+            "responses":[
+                "Requires a medical diagnosis as it seems you are sufferring from malaria, type: (Consultation) for help with doctor consultaion."
+            ]
+        },
+        {
+            "tag": "cholera",
+            "patterns":[
+                "Diarrhoea (Stool appears pale and milky)",
+                "Fatigue and weakness",
+                "Nausea and vomiting",
+                "Dehydration",
+                "Electrolyte Imbalance",
+                "Low blood pressure",
+                "Loose skin and dry mouth",
+                "Rapid heart beat",
+                "Weight loss"
+            ],
+            "responses":[
+                "Requires a medical diagnosis as it seems you are sufferring from cholera, type: (Consultation) for help with doctor consultaion."
+            ]
+        },
+        {
+            "tag": "diarrhea",
+            "patterns":[
+                "Persistent loose, watery stools",
+                "Urgent need to have bowel movement",
+                "Abdominal cramps",
+                "Abdominal pain",
+                "Fever",
+                "Nausea",
+                "Bloating",
+                "Blood in the stool"
+            ],
+            "responses":[
+                "It seems that you are suffering from diarrhea, type: (diarrhea medicines) for medicine, (diarrhea prevention) for prevention, (diarrhea diet) for diet."
             ]
         },
         {
@@ -94,7 +149,7 @@
                 "General weakness"
             ],
             "responses": [
-                "It seems that you are suffering from fever"
+                "It seems that you are suffering from fever, type: (fever medicines) for medicine, (fever prevention) for prevention, (fever diet) for diet."
             ]
         },
         {
@@ -108,7 +163,7 @@
                 "extreme fatigue"
             ],
             "responses": [
-                "It seems that you are suffering from Diabetes"
+                "It seems that you are suffering from Diabetes, type: (diabetes medicines) for medicine, (diabetes prevention) for prevention, (diabetes diet) for diet."
             ]
         },
         {
@@ -123,7 +178,7 @@
                 "Looking at death"
             ],
             "responses": [
-                "It seem that you are suffering from depression"
+                "It seem that you are suffering from depression, type: (depression medicines) for medicine, (depression prevention) for prevention, (depression diet) for diet."
             ]
         },
         {
@@ -137,68 +192,187 @@
                 "fatigue"
             ],
             "responses": [
-                "It seem that you are suffering from Asthma"
+                "It seem that you are suffering from Asthma,  type: (asthma medicines) for medicine, (asthma prevention) for prevention, (asthma diet) for diet."
+            ]
+        },
+        {
+            "tag": "diarrhea prevention",
+            "patterns": [
+                "tell me some prevention method from diarrhea",
+                "diarrhea prevention"
+            ],
+            "responses": [
+                "Infection is spread through contaminated food or drinking-water, or from person-to-person as a result of poor hygiene. Interventions to prevent diarrhoea, including safe drinking-water, use of improved sanitation and hand washing with soap can reduce disease risk.."
+            ]
+        },
+        {
+            "tag": "diarrhea medicines",
+            "patterns": [
+                "What medicines can I medicine to help me with my diarrhea?",
+                "diarrhea medicines"
+            ],
+            "responses": [
+                "Medicines you can consume : Antibiotics include Trimethoprim and Sulfamethoxazole, Anti-diarrhoeal agents include Loperamide and Diphenoxylatex"
+            ]
+        },
+        {
+            "tag": "diarrhea diet",
+            "patterns": [
+                "What should I eat or drink if i am suffering from common cold?",
+                "diarrhea diet"
+            ],
+            "responses": [
+                "SUGGESTED FOODS ARE:Foods to eat: Completely cooked foods, Well balanced diet , Fruits and vegetables"
             ]
         },
         {
             "tag": "common cold prevention",
             "patterns": [
-                "What medicines can I buy to help me with my common cold?",
-                "tell me some prevention method from common cold",
-                "What should I eat or drink if i am suffering from common cold?",
-                "How can I keep from getting a cold or the flu?",
-                "cmed"
+                "tell me some prevention method for common cold",
+                "common cold prevention"
             ],
             "responses": [
-                "medicines you can consume : Dextromethorphan,Decongestant,Diphenhydramine,Crocin Cold & Flu Max, preventions that you must follow :Wash your hands,Avoid touching your face,Clean frequently used surfaces,Use hand sanitizers,SUGGESTED FOODS ARE:Garlic,Vitamin C–containing fruits,Leafy greens,Broccoli,Oatmeal,Spices,Chicken Soup"
+                "Preventions that you must follow :Wash your hands,Avoid touching your face,Clean frequently used surfaces,Use hand sanitizers."
+            ]
+        },
+        {
+            "tag": "common cold medicines",
+            "patterns": [
+                "What medicines can I medicine to help me with my common cold?",
+                "common cold medicines"
+            ],
+            "responses": [
+                "Medicines you can consume : Dextromethorphan,Decongestant,Diphenhydramine,Crocin Cold & Flu Max"
+            ]
+        },
+        {
+            "tag": "common cold diet",
+            "patterns": [
+                "What should I eat or drink if i am suffering from common cold?",
+                "common cold diet"
+            ],
+            "responses": [
+                "SUGGESTED FOODS ARE:Garlic,Vitamin C–containing fruits,Leafy greens,Broccoli,Oatmeal,Spices,Chicken Soup."
+            ]
+        },
+        {
+            "tag": "fever medicines",
+            "patterns": [
+                "What medicines can I have to help me with my fever?",
+                "fever medicines"
+            ],
+            "responses": [
+                "Medicines you can consume : acetaminophen ,ibuprofen,aspirin,Crocin Cold & Flu Max."
             ]
         },
         {
             "tag": "fever prevention",
             "patterns": [
-                "What medicines can I buy to help me with my fever?",
-                "tell me some prevention method from fever",
-                "What should I eat or drink if i am suffering from fever?",
-                "How can I keep from getting a fever?"
+                "tell me some prevention method for fever",
+                "fever prevention"
             ],
             "responses": [
-                "medicines you can consume : acetaminophen ,ibuprofen,aspirin,Crocin Cold & Flu Max, prevention that you must follow :Wash your hands,Cover your mouth when you cough and your nose when you sneeze,Clean frequently used surfaces,Avoid sharing cups, glasses, and eating utensils with other people.,SUGGESTED FOODS ARE:Garlic,Vitamin C–containing fruits,Leafy greens,Broccoli,Oatmeal,Spices,Chicken Soup"
+                "Prevention that you must follow :Wash your hands,Cover your mouth when you cough and your nose when you sneeze,Clean frequently used surfaces,Avoid sharing cups, glasses, and eating utensils with other people."
+            ]
+        },
+        {
+            "tag": "fever diet",
+            "patterns": [
+                "What should I eat or drink if i am suffering from fever?",
+                "fever diet"
+            ],
+            "responses": [
+                "SUGGESTED FOODS ARE:Garlic,Vitamin C–containing fruits,Leafy greens,Broccoli,Oatmeal,Spices,Chicken Soup."
+            ]
+        },
+        {
+            "tag": "diabetes medicines",
+            "patterns": [
+                "What medicines can I have to help me with my diabetes?",
+                "diabetes medicines"
+            ],
+            "responses": [
+                "Medicines you can consume : Insulin ,Amylinomimetic drug,Dipeptidyl peptidase-4 (DPP-4) inhibitor."
             ]
         },
         {
             "tag": "diabetes prevention",
             "patterns": [
-                "What medicines can I buy to help me with my diabetes?",
-                "tell me some prevention method from diabetes",
-                "What should I eat or drink if i am suffering from diabetes?",
-                "How can I keep from getting diabetes?"
+                "tell me some prevention method for diabetes",
+                "diabetes prevention"
             ],
             "responses": [
-                "medicines you can consume : Insulin ,Amylinomimetic drug,Dipeptidyl peptidase-4 (DPP-4) inhibitor, prevention that you must follow :Cut Sugar and Refined Carbs From Your Diet,Work Out Regularly,Drink Water as Your Primary Beverage,Lose Weight If You’re Overweight or Obese,Quit Smoking, Follow a Very-Low-Carb Diet,Watch Portion Sizes,SUGGESTED FOODS ARE:Leafy greens,Avocados,Eggs"
+                "Prevention that you must follow :Cut Sugar and Refined Carbs From Your Diet,Work Out Regularly,Drink Water as Your Primary Beverage,Lose Weight If You’re Overweight or Obese,Quit Smoking, Follow a Very-Low-Carb Diet,Watch Portion Sizes."
+            ]
+        },
+        {
+            "tag": "diabetes diet",
+            "patterns": [
+                "What should I eat or drink if i am suffering from diabetes?",
+                "diabetes diet"
+            ],
+            "responses": [
+                "SUGGESTED FOODS ARE:Leafy greens,Avocados,Eggs"
             ]
         },
         {
             "tag": "depression prevention",
             "patterns": [
-                "What medicines can I buy to help me with my depression?",
-                "tell me some prevention method from depression",
-                "What should I eat or drink if i am suffering from depression?",
-                "How can I keep from getting depression?"
+                "tell me some prevention method for depression",
+                "depression prevention"
             ],
             "responses": [
-                "medicines you can consume :  brexpiprazole, quetiapine,olanzapine, prevention that you must follow :Exercise regularly,Cut back on social media time,Drink Water as Your Primary Beverage,Build strong relationships,Minimize your daily choices, Follow a Very-Low-Carb Diet,SUGGESTED FOODS ARE:Get Enough Vitamin D,Include Omega-3 Fatty Acids,Beans and legumes"
+                "Prevention that you must follow :Exercise regularly,Cut back on social media time,Drink Water as Your Primary Beverage,Build strong relationships,Minimize your daily choices, Follow a Very-Low-Carb Diet."
+            ]
+        },
+        {
+            "tag": "depression medicines",
+            "patterns": [
+                "What medicines can I buy to help me with my depression?",
+                "depression medicines"
+            ],
+            "responses": [
+                "Medicines you can consume :  brexpiprazole, quetiapine,olanzapine."
+            ]
+        },
+        {
+            "tag": "depression diet",
+            "patterns": [
+                "What should I eat or drink if i am suffering from depression?",
+                "depression diet"
+            ],
+            "responses": [
+                "SUGGESTED FOODS ARE:Get Enough Vitamin D,Include Omega-3 Fatty Acids,Beans and legumes"
+            ]
+        },
+        {
+            "tag": "asthma medicines",
+            "patterns": [
+                "What medicines can I have to help me with my asthma?",
+                "asthma medicines"
+            ],
+            "responses": [
+                "Medicines you can consume : epinephrine,anticholinergic,Proair HFA."
             ]
         },
         {
             "tag": "asthma prevention",
             "patterns": [
-                "What medicines can I buy to help me with my asthma?",
-                "tell me some prevention method from asthma",
-                "What should I eat or drink if i am suffering from asthma?",
-                "How can I keep from getting asthma?"
+                "tell me some prevention method for asthma",
+                "asthma prevention"
             ],
             "responses": [
-                "medicines you can consume : epinephrine,anticholinergic,Proair HFA, prevention that you must follow : Identify Asthma Triggers, Stay Away From Allergens,Avoid Smoke of Any Type,SUGGESTED FOODS ARE:carrots,juice,eggs,broccoli,cantaloupe,milk"
+                "Prevention that you must follow : Identify Asthma Triggers, Stay Away From Allergens,Avoid Smoke of Any Type."
+            ]
+        },
+        {
+            "tag": "asthma diet",
+            "patterns": [
+                "What should I eat or drink if i am suffering from asthma?",
+                "asthma diet"
+            ],
+            "responses": [
+                "SUGGESTED FOODS ARE:carrots,juice,eggs,broccoli,cantaloupe,milk"
             ]
         },
         {

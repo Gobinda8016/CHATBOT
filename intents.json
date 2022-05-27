@@ -84,20 +84,20 @@
         {
             "tag": "malaria",
             "patterns":[
-                "Shaking chills",
+                "chills",
                 "Profuse sweating",
                 "Abdominal pain",
                 "Muscle pain",
                 "Nausea",
                 "Vomiting",
                 "Diarrhoea",
+                "loose motion",
                 "Anaemia",
                 "Deep breathing and respiratory distress",
                 "Clinical jaundice and evidence of vital organ dysfunction",
                 "Impaired consciousness",
                 "Bloody stools",
-                "Convulsions",
-                "Coma"
+                "Convulsions"
             ],
             "responses":[
                 "Requires a medical diagnosis as it seems you are sufferring from malaria, type: (Consultation) for help with doctor consultaion."
@@ -130,7 +130,9 @@
                 "Fever",
                 "Nausea",
                 "Bloating",
-                "Blood in the stool"
+                "Blood in the stool",
+                "Stomach pain", 
+                "loose motion"
             ],
             "responses":[
                 "It seems that you are suffering from diarrhea, type: (diarrhea medicines) for medicine, (diarrhea prevention) for prevention, (diarrhea diet) for diet."
@@ -146,7 +148,8 @@
                 "Loss of appetite",
                 "Irritability",
                 "Dehydration",
-                "General weakness"
+                "General weakness", 
+                "high temperature"
             ],
             "responses": [
                 "It seems that you are suffering from fever, type: (fever medicines) for medicine, (fever prevention) for prevention, (fever diet) for diet."
@@ -259,7 +262,8 @@
             "tag": "fever medicines",
             "patterns": [
                 "What medicines can I have to help me with my fever?",
-                "fever medicines"
+                "fever medicines",
+                "I am suffering from high fever"
             ],
             "responses": [
                 "Medicines you can consume : acetaminophen ,ibuprofen,aspirin,Crocin Cold & Flu Max."

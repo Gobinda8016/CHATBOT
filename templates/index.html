@@ -15,6 +15,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="../static/css/app.css">
+    <link rel="stylesheet" href="../static/css/style.css">
+    <link rel="stylesheet" href="../static/css/mobile.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </head>
 
@@ -48,7 +50,7 @@
                         </ul>
                     </li>
                     <li class="nav-item">
-                        <a href="#" class="nav-link">BLOG</a>
+                        <a href="{{ url_for('blogpost')}}" class="nav-link">BLOG</a>
                     </li>
                     <li class="nav-item">
                         <a href="#" class="nav-link">ABOUT</a>
@@ -60,6 +62,177 @@
             </div>
         </nav>
 
+                <!-- blogging -->
+        <section id="blog">
+            <div class="max-width-1 m-auto">
+                <hr>
+            </div>
+            <div class="m-auto content max-width-1 my-">
+                <div class="content-left">
+                    <h1>E Doc, Your own Medical Assistant</h1>
+                    <p>E Doc is an web application which will let you know illness,from your fingertips.</p>
+                    <p>Give your symptoms on the chatbox, and our powerful AI-based chatbot will let you know your 
+                        diseases and also able to prescribe you the list of medicine and diet</p>
+                </div>
+                <div class="content-right">
+                    <img src="../static/images/11.svg" alt="right-img">
+                </div>
+            </div>
+        
+            <div class="max-width-1 m-auto">
+                <hr>
+            </div>
+            <div class="home-articles max-width-1 m-auto font2">
+              <h2>Featured Articles</h2>
+                <div class="home-article">
+                    <div class="home-article-img">
+                        <img src="../static/images/3.png" alt="article">
+                    </div>
+                     <div class="home-article-content font1">
+                        <a href="#">
+                            <h3>11 Ways to Prevent Type 2 Diabetes</h3>
+                            <p>Type 2 diabetes is a chronic medical condition that affects millions of people worldwide. 
+                                Unmanaged diabetes may lead to blindness, kidney failure, heart disease, and other serious conditions.</p>
+                        </a>
+                    </div>
+                </div>
+                <div class="home-article">
+                    <div class="home-article-img">
+                        <img src="../static/images/1.png" alt="article">
+                    </div>
+                    <div class="home-article-content font1">
+                        <a href="{{ url_for('blogpost')}}">
+                            <h3>Lorem ipsum dolor sit amet consectetur adipisicing.</h3>
+                        </a>
+                    </div>
+                </div>
+                <div class="home-article">
+                    <div class="home-article-img">
+                        <img src="../static/images/2.png" alt="article">
+                    </div>
+                    <div class="home-article-content font1">
+                        <a href="{{ url_for('blogpost')}}">
+                            <h3>Lorem ipsum dolor sit amet consectetur adipisicing.</h3>
+                        </a>
+                    </div>
+                </div>
+                <div class="home-article">
+                    <div class="home-article-img">
+                        <img src="../static/images/1.png" alt="article">
+                    </div>
+                    <div class="home-article-content font1">
+                        <a href="{{ url_for('blogpost')}}">
+                            <h3>Lorem ipsum dolor sit amet consectetur adipisicing.</h3>
+                        </a>
+                    </div>
+                </div>
+                <div class="home-article">
+                    <div class="home-article-img">
+                        <img src="../static/images/11.svg" alt="article">
+                    </div>
+                    <div class="home-article-content font1">
+                        <a href="{{ url_for('blogpost')}}">
+                            <h3>Lorem ipsum dolor sit amet consectetur adipisicing.</h3>
+                        </a>
+                    </div>
+                </div>
+                <div class="home-article">
+                    <div class="home-article-img">
+                        <img src="../static/images/3.png" alt="article">
+                    </div>
+                    <div class="home-article-content font1">
+                        <a href="{{ url_for('blogpost')}}">
+                            <h3>Lorem ipsum dolor sit amet consectetur adipisicing.</h3>
+                        </a>
+                    </div>
+            </div>
+        </section>
+
+                <!-- blogging -->
+                <section id="blog">
+                    <div class="max-width-1 m-auto">
+                        <hr>
+                    </div>
+                    <div class="m-auto content max-width-1 my-">
+                        <div class="content-left">
+                            <h1>E Doc, Your own Medical Assistant</h1>
+                            <p>E Doc is an web application which will let you know illness,from your fingertips.</p>
+                            <p>Give your symptoms on the chatbox, and our powerful AI-based chatbot will let you know your 
+                                diseases and also able to prescribe you the list of medicine and diet</p>
+                        </div>
+                        <div class="content-right">
+                            <img src="../static/images/11.svg" alt="iBlog">
+                        </div>
+                    </div>
+                
+                    <div class="max-width-1 m-auto">
+                        <hr>
+                    </div>
+                    <div class="home-articles max-width-1 m-auto font2">
+                      <h2>Featured Articles</h2>
+                        <div class="home-article">
+                            <div class="home-article-img">
+                                <img src="../static/images/3.png" alt="article">
+                            </div>
+                             <div class="home-article-content font1">
+                                <a href="{{ url_for('blogpost')}}">
+                                    <h3>11 Ways to Prevent Type 2 Diabetes</h3>
+                                    <p>Type 2 diabetes is a chronic medical condition that affects millions of people worldwide. 
+                                        Unmanaged diabetes may lead to blindness, kidney failure, heart disease, and other serious conditions.</p>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="home-article">
+                            <div class="home-article-img">
+                                <img src="../static/images/1.png" alt="article">
+                            </div>
+                            <div class="home-article-content font1">
+                                <a href="{{ url_for('blogpost')}}">
+                                    <h3>Lorem ipsum dolor sit amet consectetur adipisicing.</h3>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="home-article">
+                            <div class="home-article-img">
+                                <img src="../static/images/2.png" alt="article">
+                            </div>
+                            <div class="home-article-content font1">
+                                <a href="{{ url_for('blogpost')}}">
+                                    <h3>Lorem ipsum dolor sit amet consectetur adipisicing.</h3>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="home-article">
+                            <div class="home-article-img">
+                                <img src="../static/images/1.png" alt="article">
+                            </div>
+                            <div class="home-article-content font1">
+                                <a href="{{ url_for('blogpost')}}">
+                                    <h3>Lorem ipsum dolor sit amet consectetur adipisicing.</h3>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="home-article">
+                            <div class="home-article-img">
+                                <img src="../static/images/11.svg" alt="article">
+                            </div>
+                            <div class="home-article-content font1">
+                                <a href="{{ url_for('blogpost')}}">
+                                    <h3>Lorem ipsum dolor sit amet consectetur adipisicing.</h3>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="home-article">
+                            <div class="home-article-img">
+                                <img src="../static/images/3.png" alt="article">
+                            </div>
+                            <div class="home-article-content font1">
+                                <a href="{{ url_for('blogpost')}}">
+                                    <h3>Lorem ipsum dolor sit amet consectetur adipisicing.</h3>
+                                </a>
+                            </div>
+                    </div>
+                </section>
         <!--Chat Bot button-->
         <section id="chat-popup">
             <div id="chat">

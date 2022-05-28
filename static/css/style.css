@@ -26,7 +26,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  color: #e63030;
+  color: #ff6060;
   padding: 49px;
   z-index: 1;
 }
@@ -52,7 +52,7 @@
     padding: 40px;
     margin-top: 23px;
     position: absolute;
-    color: #e95656;
+    color: #ff7676;
   }
 
   .home-article {
@@ -70,7 +70,7 @@
   }
 
   .home-article-content h3 {
-    color: #e95656;
+    color: #f56161;
   }
 
   .home-article-content p {

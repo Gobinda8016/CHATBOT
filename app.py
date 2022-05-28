@@ -33,6 +33,16 @@ def blogpost():
     return render_template("blogpost.html")
 
 
+@app.route("/blogpost2")
+def blogpost2():
+    return render_template("blogpost2.html")
+
+
+@app.route("/blogpost3")
+def blogpost3():
+    return render_template("blogpost3.html")
+
+
 @app.route("/contact")
 def contact():
     return render_template("contact.html")

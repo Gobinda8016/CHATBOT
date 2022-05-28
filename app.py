@@ -23,9 +23,19 @@ def Login():
     return render_template("login.html")
 
 
+@app.route("/about")
+def about():
+    return render_template("about.html")
+
+
 @app.route("/blogpost")
 def blogpost():
     return render_template("blogpost.html")
+
+
+@app.route("/contact")
+def contact():
+    return render_template("contact.html")
 
 
 @app.route("/Login/registration")
@@ -75,6 +85,18 @@ def add_user():
     password = request.form.get('passworda')
     cursor.execute("""INSERT INTO `Registration` (`username`,`email`,`password`) VALUES ('{}','{}','{}')""".format(
         username, email, password))
+    conn.commit()
+    return render_template('index.html')
+
+
+@app.route('/add_contact', methods=['POST'])
+def add_contact():
+    firstname = request.form.get('firstname')
+    lastname = request.form.get('lastname')
+    country = request.form.get('country')
+    subject = request.form.get('subject')
+    cursor.execute("""INSERT INTO `Contact Form`  (`firstname`,`lastname`,`country`, `subject`) VALUES ('{}','{}','{}', '{}')""".format(
+        firstname, lastname, country, subject))
     conn.commit()
     return render_template('index.html')
 

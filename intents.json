@@ -59,7 +59,6 @@
                 "can you tell me your name"
             ],
             "responses": [
-                "you can call me EDOC!",
                 "i am EDOC!",
                 "i am EDOC your medical assistant"
             ]
@@ -67,14 +66,16 @@
         {
             "tag": "common cold symptoms",
             "patterns": [
-                "Runny or stuffy nose",
+                "Runny nose",
+                "stuffy nose",
                 "Sore throat",
                 "Cough",
                 "coughing",
                 "Congestion",
-                "Slight body aches or a mild headache",
+                "Slight body aches",
+                "mild headache",
                 "Sneezing",
-                "Low-grade fever",
+                "Low fever",
                 "Generally feeling unwell (malaise)"
             ],
             "responses": [
@@ -82,19 +83,19 @@
             ]
         },
         {
-            "tag": "malaria",
+            "tag": "malaria symptoms",
             "patterns":[
                 "chills",
-                "Profuse sweating",
+                "sweating",
                 "Abdominal pain",
-                "Muscle pain",
+                "body ache",
                 "Nausea",
                 "Vomiting",
                 "Diarrhoea",
                 "loose motion",
                 "Anaemia",
-                "Deep breathing and respiratory distress",
-                "Clinical jaundice and evidence of vital organ dysfunction",
+                "Deep breathing",
+                "jaundice",
                 "Impaired consciousness",
                 "Bloody stools",
                 "Convulsions"
@@ -104,9 +105,9 @@
             ]
         },
         {
-            "tag": "cholera",
+            "tag": "cholera symptoms",
             "patterns":[
-                "Diarrhoea (Stool appears pale and milky)",
+                "Diarrhoea",
                 "Fatigue and weakness",
                 "Nausea and vomiting",
                 "Dehydration",
@@ -121,13 +122,12 @@
             ]
         },
         {
-            "tag": "diarrhea",
+            "tag": "diarrhea symptoms",
             "patterns":[
                 "Persistent loose, watery stools",
                 "Urgent need to have bowel movement",
                 "Abdominal cramps",
                 "Abdominal pain",
-                "Fever",
                 "Nausea",
                 "Bloating",
                 "Blood in the stool",
@@ -141,14 +141,12 @@
         {
             "tag": "fever symptoms",
             "patterns": [
-                "Sweating",
-                "Chills and shivering",
+                "shivering",
                 "Headache",
-                "Muscle aches",
-                "tast loss",
-                "Irritability",
+                "taste loss",
+                "joint pain",
                 "Dehydration",
-                "General weakness", 
+                "weakness", 
                 "high temperature"
             ],
             "responses": [
@@ -161,7 +159,7 @@
                 "increased hunger",
                 "increased thirst",
                 "weight loss",
-                "frequent urination",
+                "frequent urine",
                 "blurry vision",
                 "extreme fatigue"
             ],
@@ -192,7 +190,8 @@
                 "shortness of breath",
                 "difficulty talking",
                 "panic",
-                "fatigue"
+                "fatigue", 
+                "difficulty breathing"
             ],
             "responses": [
                 "It seem that you are suffering from Asthma,  type: (asthma medicines) for medicine, (asthma prevention) for prevention, (asthma diet) for diet."
@@ -202,30 +201,11 @@
             "tag": "diarrhea prevention",
             "patterns": [
                 "tell me some prevention method from diarrhea",
-                "diarrhea prevention"
+                "diarrhea prevention", 
+                "prevention diarrhea"
             ],
             "responses": [
                 "Infection is spread through contaminated food or drinking-water, or from person-to-person as a result of poor hygiene. Interventions to prevent diarrhoea, including safe drinking-water, use of improved sanitation and hand washing with soap can reduce disease risk.."
-            ]
-        },
-        {
-            "tag": "diarrhea medicines",
-            "patterns": [
-                "What medicines can I medicine to help me with my diarrhea?",
-                "diarrhea medicines"
-            ],
-            "responses": [
-                "Medicines you can consume : Antibiotics include Trimethoprim and Sulfamethoxazole, Anti-diarrhoeal agents include Loperamide and Diphenoxylatex"
-            ]
-        },
-        {
-            "tag": "diarrhea diet",
-            "patterns": [
-                "What should I eat or drink if i am suffering from common cold?",
-                "diarrhea diet"
-            ],
-            "responses": [
-                "SUGGESTED FOODS ARE:Foods to eat: Completely cooked foods, Well balanced diet , Fruits and vegetables"
             ]
         },
         {
@@ -239,23 +219,66 @@
             ]
         },
         {
-            "tag": "common cold medicines",
+            "tag": "fever prevention",
             "patterns": [
-                "What medicines can I medicine to help me with my common cold?",
-                "common cold medicines"
+                "tell me some prevention method for fever",
+                "fever prevention"
             ],
             "responses": [
-                "Medicines you can consume : Dextromethorphan,Decongestant,Diphenhydramine,Crocin Cold & Flu Max"
+                "Prevention that you must follow :Wash your hands,Cover your mouth when you cough and your nose when you sneeze,Clean frequently used surfaces,Avoid sharing cups, glasses, and eating utensils with other people."
             ]
         },
         {
-            "tag": "common cold diet",
+            "tag": "diabetes prevention",
             "patterns": [
-                "What should I eat or drink if i am suffering from common cold?",
-                "common cold diet"
+                "tell me some prevention method for diabetes",
+                "diabetes prevention"
             ],
             "responses": [
-                "SUGGESTED FOODS ARE:Garlic,Vitamin C–containing fruits,Leafy greens,Broccoli,Oatmeal,Spices,Chicken Soup."
+                "Prevention that you must follow :Cut Sugar and Refined Carbs From Your Diet,Work Out Regularly,Drink Water as Your Primary Beverage,Lose Weight If You’re Overweight or Obese,Quit Smoking, Follow a Very-Low-Carb Diet,Watch Portion Sizes."
+            ]
+        },
+        {
+            "tag": "depression prevention",
+            "patterns": [
+                "tell me some prevention method for depression",
+                "depression prevention"
+            ],
+            "responses": [
+                "Prevention that you must follow :Exercise regularly,Cut back on social media time,Drink Water as Your Primary Beverage,Build strong relationships,Minimize your daily choices, Follow a Very-Low-Carb Diet."
+            ]
+        },
+        {
+            "tag": "asthma prevention",
+            "patterns": [
+                "tell me some prevention method for asthma",
+                "asthma prevention"
+            ],
+            "responses": [
+                "Prevention that you must follow : Identify Asthma Triggers, Stay Away From Allergens,Avoid Smoke of Any Type."
+            ]
+        },
+
+        {
+            "tag": "diarrhea medicines",
+            "patterns": [
+                "What medicines can I medicine to help me with my diarrhea?",
+                "diarrhea medicines",
+                "medicines for diarrhea"
+            ],
+            "responses": [
+                "Medicines you can consume : Antibiotics include Trimethoprim and Sulfamethoxazole, Anti-diarrhoeal agents include Loperamide and Diphenoxylatex"
+            ]
+        },
+        {
+            "tag": "common cold medicines",
+            "patterns": [
+                "What medicines can I medicine to help me with my common cold?",
+                "common cold medicines",
+                "medicines for common cold"
+            ],
+            "responses": [
+                "Medicines you can consume : Dextromethorphan,Decongestant,Diphenhydramine,Crocin Cold & Flu Max"
             ]
         },
         {
@@ -270,63 +293,14 @@
             ]
         },
         {
-            "tag": "fever prevention",
-            "patterns": [
-                "tell me some prevention method for fever",
-                "fever prevention"
-            ],
-            "responses": [
-                "Prevention that you must follow :Wash your hands,Cover your mouth when you cough and your nose when you sneeze,Clean frequently used surfaces,Avoid sharing cups, glasses, and eating utensils with other people."
-            ]
-        },
-        {
-            "tag": "fever diet",
-            "patterns": [
-                "What should I eat or drink if i am suffering from fever?",
-                "fever diet"
-            ],
-            "responses": [
-                "SUGGESTED FOODS ARE:Garlic,Vitamin C–containing fruits,Leafy greens,Broccoli,Oatmeal,Spices,Chicken Soup."
-            ]
-        },
-        {
             "tag": "diabetes medicines",
             "patterns": [
                 "What medicines can I have to help me with my diabetes?",
-                "diabetes medicines"
+                "diabetes medicines", 
+                "Medicines for diabetes"
             ],
             "responses": [
-                "Medicines you can consume : Insulin ,Amylinomimetic drug,Dipeptidyl peptidase-4 (DPP-4) inhibitor."
-            ]
-        },
-        {
-            "tag": "diabetes prevention",
-            "patterns": [
-                "tell me some prevention method for diabetes",
-                "diabetes prevention"
-            ],
-            "responses": [
-                "Prevention that you must follow :Cut Sugar and Refined Carbs From Your Diet,Work Out Regularly,Drink Water as Your Primary Beverage,Lose Weight If You’re Overweight or Obese,Quit Smoking, Follow a Very-Low-Carb Diet,Watch Portion Sizes."
-            ]
-        },
-        {
-            "tag": "diabetes diet",
-            "patterns": [
-                "What should I eat or drink if i am suffering from diabetes?",
-                "diabetes diet"
-            ],
-            "responses": [
-                "SUGGESTED FOODS ARE:Leafy greens,Avocados,Eggs"
-            ]
-        },
-        {
-            "tag": "depression prevention",
-            "patterns": [
-                "tell me some prevention method for depression",
-                "depression prevention"
-            ],
-            "responses": [
-                "Prevention that you must follow :Exercise regularly,Cut back on social media time,Drink Water as Your Primary Beverage,Build strong relationships,Minimize your daily choices, Follow a Very-Low-Carb Diet."
+                "Medicines you can consume : Insulin ,Amylinomimetic drug,Dipeptidyl peptidase-4 (DPP-4) inhibitor. We recoomed you to speak to specialist regrading your diabetes"
             ]
         },
         {
@@ -340,16 +314,6 @@
             ]
         },
         {
-            "tag": "depression diet",
-            "patterns": [
-                "What should I eat or drink if i am suffering from depression?",
-                "depression diet"
-            ],
-            "responses": [
-                "SUGGESTED FOODS ARE:Get Enough Vitamin D,Include Omega-3 Fatty Acids,Beans and legumes"
-            ]
-        },
-        {
             "tag": "asthma medicines",
             "patterns": [
                 "What medicines can I have to help me with my asthma?",
@@ -359,21 +323,67 @@
                 "Medicines you can consume : epinephrine,anticholinergic,Proair HFA."
             ]
         },
+
         {
-            "tag": "asthma prevention",
+            "tag": "diarrhea diet",
             "patterns": [
-                "tell me some prevention method for asthma",
-                "asthma prevention"
+                "What should I eat or drink if i am suffering from common cold?",
+                "diarrhea diet",
+                "what can i have during diarrhea"
             ],
             "responses": [
-                "Prevention that you must follow : Identify Asthma Triggers, Stay Away From Allergens,Avoid Smoke of Any Type."
+                "SUGGESTED FOODS ARE:Foods to eat: Completely cooked foods, Well balanced diet , Fruits and vegetables"
+            ]
+        },
+        {
+            "tag": "common cold diet",
+            "patterns": [
+                "What should I eat or drink if i am suffering from common cold?",
+                "common cold diet", 
+                "what can i have during common cold"
+            ],
+            "responses": [
+                "SUGGESTED FOODS ARE:Garlic,Vitamin C–containing fruits,Leafy greens,Broccoli,Oatmeal,Spices,Chicken Soup."
+            ]
+        },
+        {
+            "tag": "fever diet",
+            "patterns": [
+                "What should I eat or drink if i am suffering from fever?",
+                "fever diet", 
+                "what can i have during common cold"
+            ],
+            "responses": [
+                "SUGGESTED FOODS ARE:Garlic,Vitamin C–containing fruits,Leafy greens,Broccoli,Oatmeal,Spices,Chicken Soup."
+            ]
+        },
+        {
+            "tag": "diabetes diet",
+            "patterns": [
+                "What should I eat or drink if i am suffering from diabetes?",
+                "diabetes diet"
+            ],
+            "responses": [
+                "SUGGESTED FOODS ARE:Leafy greens,Avocados,Eggs"
+            ]
+        },  
+        {
+            "tag": "depression diet",
+            "patterns": [
+                "What should I eat or drink if i am suffering from depression?",
+                "depression diet",
+                "what can have if i am depressed"
+            ],
+            "responses": [
+                "SUGGESTED FOODS ARE:Get Enough Vitamin D,Include Omega-3 Fatty Acids,Beans and legumes"
             ]
         },
         {
             "tag": "asthma diet",
             "patterns": [
                 "What should I eat or drink if i am suffering from asthma?",
-                "asthma diet"
+                "asthma diet",
+                "what is good for asthma"
             ],
             "responses": [
                 "SUGGESTED FOODS ARE:carrots,juice,eggs,broccoli,cantaloupe,milk"

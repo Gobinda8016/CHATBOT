@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css">
+    <script src="https://kit.fontawesome.com/c6a19a1ece.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../static/css/about.css">
+    <link rel="stylesheet" href="../static/css/app.css">
+    <title>ABOUT EDOC</title>
+</head>
+<body>
+
+        <!---Main Navigation-->
+        <nav id="MainNavBar" class="navbar navbar-dark navbar-expand-md fixed-top">
+
+            <a href="#" class="navbar-brand">EDOC
+                <i class="fas fa-stethoscope"></i>
+            </a>
+
+            <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navLinks">
+                <!--Navigation Button after Collapse-->
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navLinks" aria-label="Toggle navigation">
+                <!--Navigation Items-->
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a href="./index.html " class="nav-link">HOME</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">ACCOUNT</a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="{{ url_for('Login')}}">SignIn</a></li>
+                            <li><a class="dropdown-item" href="{{ url_for('registration')}}">SignUp</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a href="{{ url_for('blogpost')}}" class="nav-link">BLOG</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">ABOUT</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">TICKET</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+            <section id="container">
+                <img src="../static/images/pexels-fauxels-3183197-min-1-768x513.jpg" alt="about us img">
+
+                <h1>About EDOC</h1>
+
+                <div class="edoc">
+                    <p>DOC is a powerful AI-based chatbot, that helps users to get a quick review of their current health symptoms. <br> we have made E-doc precise to
+                        answer related to health. 
+
+                    Edoc is fully based on Python, and an open source we application. <br> you can find more information and code on our github link: <a href="https://github.com/Gobinda8016/CHATBOT">EDOC CHATBOT Github</a>
+                </p>
+                </div>
+                    <h1>About Us</h1>
+                <div class="about-us">
+                    <p>
+                        EDOC came up as an idea for our final year project. We want to develop an powerful ai based chatbot that can solve realworld problems. As an result edoc was built
+                </p>
+                    <h2>E DOC Creators</h2>
+
+                    Mrinal Das - <a href="https://github.com/Mrinal216">https://github.com/Mrinal216</a>  <br>
+                    Gobinda Karmakar - <a href="https://github.com/Gobinda8016">https://github.com/Gobinda8016</a>  <br>
+                    Krishna Saha - <a href="https://github.com/CyberGhost9">https://github.com/CyberGhost9</a>  <br>
+                    Suman Kalyan Mondal - <a href="https://github.com/SumanKalyanMondal">https://github.com/SumanKalyanMondal</a> <br>
+                    
+                </div>
+            </section>
+
+                       <!--Boot Strap JavaScript-->
+                       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+                       integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+                       crossorigin="anonymous">
+                       </script>
+</body>
+</html>

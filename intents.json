@@ -14,7 +14,8 @@
             "responses": [
                 "hello",
                 "hey!",
-                "what can i do for you?"
+                "what can i do for you?",
+                "Hello, Type your symptoms "
             ]
         },
         {
